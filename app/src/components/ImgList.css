@@ -1,0 +1,60 @@
+img{
+  padding-left: 18px;
+}
+
+p{
+  padding-left:50px; 
+}
+
+.favorite{
+  background-color:#f1f1f1;
+  cursor: pointer;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  overflow: hidden;
+  position: relative;
+}
+
+.favorite:hover i{
+  /*background-color: RoyalBlue;*/
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+.favorite i{
+  color: dodgerblue;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+
+.favorite::before{
+  content:"";
+  position: absolute;
+  width: 150%;
+  height: 160%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top:90%;
+}
+
+.favorite:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa{
+  0%{
+    top: -110%;
+    left: 90%;
+  }50%{
+    top:  10%;
+    left:-30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
+}
